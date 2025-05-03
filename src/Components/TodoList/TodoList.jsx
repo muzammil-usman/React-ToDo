@@ -8,15 +8,12 @@ export default function TodoList() {
   let valueGetter = (e) => {
     setInput(e.target.value);
   };
-  console.log(todo);
   return (
     <>
-      <div className="main w-full h-screen bg-black">
+      <div className="main w-full h-screen ">
         <div className="mainCont w-10/12 flex items-center justify-center gap-12 flex-col">
-          <h1 className="text-white text-5xl overflow-y-hidden mt-16">
-            To-Do List
-          </h1>
-          <div className="todoList min-h-96 h-auto w-200 bg-white flex  gap-8 flex-col">
+          <h1 className=" text-5xl overflow-y-hidden mt-16">To-Do List</h1>
+          <div className="todoList min-h-96 h-auto w-200  flex  gap-8 flex-col">
             <div className="adder flex  items-center justify-center gap-6 mt-8">
               <input
                 type="text"
@@ -27,7 +24,7 @@ export default function TodoList() {
                 onChange={valueGetter}
               />
               <button
-                className="w-20 h-10 rounded-b-sm border-1 transition hover:bg-black hover:text-white hover:cursor-pointer"
+                className="bg-green-500 rounded-b-sm w-20 h-10 transition hover:bg-green-400  hover:cursor-pointer "
                 onClick={() => {
                   if (input.length < 2) {
                     alert("2 se bari length rakh bhai");
@@ -51,7 +48,7 @@ export default function TodoList() {
             <div className=" flex flex-col gap-4">
               {todo.length < 1 ? (
                 <div className="flex justify-center ">
-                  <span className=" p-2 text-black">No items to display </span>
+                  <span className=" p-2 ">No items to display </span>
                 </div>
               ) : (
                 todo?.map((item) => (
@@ -60,7 +57,7 @@ export default function TodoList() {
                     className="flex justify-center items-center  gap-4"
                   >
                     <span>{item?.text}</span>
-                    <button className="bg-black text-white  w-20 h-8 rounded-b-sm transition hover:bg-gray-800 hover:text-white hover:cursor-pointer">
+                    <button className="bg-blue-500 text-white  w-20 h-8 rounded-b-sm transition hover:bg-blue-400 hover:text-white hover:cursor-pointer">
                       done
                     </button>
                     <button className="bg-green-500 rounded-b-sm w-20 h-8 transition hover:bg-green-400  hover:cursor-pointer ">

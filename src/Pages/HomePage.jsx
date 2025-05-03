@@ -1,12 +1,15 @@
 import React from "react";
 import Navbar from "../Components/Navbar/Navbar";
 import TodoList from "../Components/TodoList/TodoList";
+import ThemeWrapper from "../Components/ThemeWrapper";
 
 function HomePage() {
   return (
     <>
-      <Navbar />
-      <TodoList />
+      <ThemeWrapper>
+        <Navbar />
+        <TodoList />
+      </ThemeWrapper>
     </>
   );
 }
